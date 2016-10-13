@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+        <meta name="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Modal dialog sample!</title>
+        <link rel="stylesheet" href="styles/core.css">
+    </head>
+    <body>
+        <button onclick="window.modalDialog.open(modalDialog.dialogElements[0])">Show</button>
+        <div class="modal js-modal">
+            <form class="modal_dialog js-modal_dialog">
+                <h3>アンケート</h3>
+                <dl>
+                    <dt>今日の天気</dt>
+                    <dd>
+                        <input id="sunny" type="radio" name="weather">
+                        <label for="sunny">晴れ</label>
+                        <input id="cloudy" type="radio" name="weather">
+                        <label for="cloudy">曇り</label>
+                        <input id="rainy" type="radio" name="weather">
+                        <label for="rainy">雨</label>
+                    </dd>
+                    <dt>出身地</dt>
+                    <dd>
+                        <select title="出身地">
+                            <option>カナダ</option>
+                            <option>群馬県</option>
+                            <option>中国</option>
+                            <option>アメリカ</option>
+                            <option>都島区</option>
+                        </select>
+                    </dd>
+                    <dt>年齢</dt>
+                    <dd>
+                        <input type="number" min="0" max="100" title="年齢">
+                    </dd>
+                </dl>
+                <button type="button" onclick="window.modalDialog.close()">キャンセル</button>
+                <button>送信</button>
+            </form>
+        </div>
+        <script src="scripts/bundle.js"></script>
+    </body>
+</html>
